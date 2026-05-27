@@ -13,7 +13,7 @@ from gtts import gTTS
 from langdetect import detect
 
 from pinecone import Pinecone
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 
 # =========================================
 # LOAD ENV
@@ -71,10 +71,7 @@ index = pc.Index(
 # =========================================
 # EMBEDDING MODEL
 # =========================================
-
-# embed_model = SentenceTransformer(
-#     "all-MiniLM-L6-v2"
-# )
+embed_model = None
 
 # =========================================
 # VOICE LANGUAGES
@@ -94,9 +91,9 @@ VOICE_LANG_MAP = {
 # EMBEDDING
 # =========================================
 
-# def create_embedding(text):
+def create_embedding(text):
 
-#     return embed_model.encode(text).tolist()
+    return [0.0] * 384
 
 # =========================================
 # LANGUAGE DETECTION
@@ -1278,7 +1275,9 @@ def voice_reply():
 
 if __name__ == "__main__":
 
+    port = int(os.environ.get("PORT", 5001))
+
     app.run(
-        debug=True,
-        port=5001
+        host="0.0.0.0",
+        port=port
     )
