@@ -72,9 +72,9 @@ index = pc.Index(
 # EMBEDDING MODEL
 # =========================================
 
-embed_model = SentenceTransformer(
-    "all-MiniLM-L6-v2"
-)
+# embed_model = SentenceTransformer(
+#     "all-MiniLM-L6-v2"
+# )
 
 # =========================================
 # VOICE LANGUAGES
@@ -94,9 +94,9 @@ VOICE_LANG_MAP = {
 # EMBEDDING
 # =========================================
 
-def create_embedding(text):
+# def create_embedding(text):
 
-    return embed_model.encode(text).tolist()
+#     return embed_model.encode(text).tolist()
 
 # =========================================
 # LANGUAGE DETECTION
