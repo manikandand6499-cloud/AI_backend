@@ -93,7 +93,7 @@ VOICE_LANG_MAP = {
 
 def create_embedding(text):
 
-    return [0.0] * 384
+    return [0.0] * 1024
 
 # =========================================
 # LANGUAGE DETECTION
