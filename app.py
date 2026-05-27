@@ -29,7 +29,7 @@ app = Flask(__name__)
 
 CORS(
     app,
-    origins=["https://rentit-18-05.onrender.com"]
+    origins=['https://ai-backend-phgm.onrender.com']
 )
 
 # =========================================
